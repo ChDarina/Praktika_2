@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 
@@ -26,7 +26,7 @@ namespace praktika_2
         }
         static void Main(string[] args)
         {
-            string input_f = "INPUT.TXT", output_f = "OUTPUT.TXT";
+            string input_f = "input.txt", output_f = "output.txt";
             int num=0;
             using (FileStream sf = new FileStream(input_f, FileMode.OpenOrCreate)) { }
             using (StreamReader reader = new StreamReader(input_f, Encoding.Default))
@@ -34,7 +34,7 @@ namespace praktika_2
                 if (reader.Peek() == -1)
                 {
                     Console.WriteLine("Файл пуст");
-                    Console.ReadKey();
+                    Console.ReadLine();
                     Environment.Exit(0);
                 }
                 Console.WriteLine("INPUT.TXT\n");
@@ -45,12 +45,12 @@ namespace praktika_2
                 catch
                 {
                     Console.WriteLine("\n\nФайл заполнен неверно. В строке должно быть одно число");
-                    Console.ReadKey();
+                    Console.ReadLine();
                     Environment.Exit(0);
                 }
                 if (num == -1)
                 {
-                    Console.ReadKey();
+                    Console.ReadLine();
                     Environment.Exit(0);
                 }
             }
@@ -79,10 +79,10 @@ namespace praktika_2
             using (FileStream sf = new FileStream(output_f, FileMode.OpenOrCreate)) { }
             using (StreamWriter writer = new StreamWriter(output_f))
             {
-                writer.Write(min + ", " + max);
+                writer.Write(min + " " + max);
             }
-            Console.WriteLine("\nOUTPUT.TXT\n\n" + min + ", " + max);
-            Console.ReadKey();
+            Console.WriteLine("\nOUTPUT.TXT\n\n" + min + " " + max);
+            Console.ReadLine();
         }
     }
 }
