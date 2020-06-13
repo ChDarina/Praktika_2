@@ -26,7 +26,7 @@ namespace praktika_2
         }
         static void Main(string[] args)
         {
-            string input_f = "input.txt", output_f = "output.txt";
+            string input_f = "INPUT.TXT", output_f = "OUTPUT.TXT";
             int num=0;
             using (FileStream sf = new FileStream(input_f, FileMode.OpenOrCreate)) { }
             using (StreamReader reader = new StreamReader(input_f, Encoding.Default))
